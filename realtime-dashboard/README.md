@@ -93,3 +93,20 @@ psql -h localhost -p 5432 -U esus -d esus -f sql/02_remover_triggers.sql
 - Host: `localhost`
 - Porta PostgreSQL: `5432`
 - Porta dashboard: `3000`
+
+---
+
+
+## Se o GitHub mostrar "This branch has conflicts"
+No terminal, dentro da pasta do projeto, rode:
+
+```bash
+./resolver_conflitos.sh
+```
+
+Depois finalize:
+
+```bash
+git commit -m "resolve: conflitos do PR"
+git push
+```
