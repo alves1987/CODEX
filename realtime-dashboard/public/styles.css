@@ -1,0 +1,21 @@
+* { box-sizing: border-box; font-family: Arial, sans-serif; }
+body { margin: 0; background: #f3f5f9; color: #1d2433; }
+header { padding: 16px 20px; background: #203a71; color: white; }
+header h1 { margin: 0 0 8px; font-size: 22px; }
+header p { margin: 0 0 10px; opacity: .9; }
+.status-row { display: flex; gap: 12px; align-items: center; }
+.status { padding: 4px 10px; border-radius: 999px; background: #546a98; font-size: 12px; }
+.status.ok { background: #1b8a4b; }
+.status.err { background: #b03333; }
+button { border: 0; border-radius: 8px; padding: 8px 12px; cursor: pointer; }
+main { max-width: 1100px; margin: 16px auto; padding: 0 16px; display: grid; gap: 14px; }
+.card { background: #fff; border-radius: 10px; padding: 14px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.filters { display: flex; gap: 16px; flex-wrap: wrap; }
+label { display: grid; gap: 6px; font-size: 14px; }
+input, select { padding: 7px 10px; border-radius: 6px; border: 1px solid #c7cfde; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 10px; border-bottom: 1px solid #edf1f7; font-size: 13px; }
+.op { font-weight: 700; }
+.op.INSERT { color: #1b8a4b; }
+.op.UPDATE { color: #8a6b1b; }
+.op.DELETE { color: #b03333; }

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitor e-SUS em Tempo Real</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Monitor de tabelas e-SUS</h1>
+      <p>Veja em tempo real quais tabelas estão sendo alteradas.</p>
+      <div class="status-row">
+        <span id="status" class="status">Conectando...</span>
+        <button id="reload">Recarregar histórico</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Filtros</h2>
+        <div class="filters">
+          <label>
+            Tabela
+            <input id="tableFilter" type="text" placeholder="ex.: tb_cidadao" />
+          </label>
+          <label>
+            Operação
+            <select id="opFilter">
+              <option value="">Todas</option>
+              <option value="INSERT">INSERT</option>
+              <option value="UPDATE">UPDATE</option>
+              <option value="DELETE">DELETE</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Eventos</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Horário</th>
+              <th>Schema</th>
+              <th>Tabela</th>
+              <th>Operação</th>
+              <th>Usuário</th>
+            </tr>
+          </thead>
+          <tbody id="eventsBody"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
