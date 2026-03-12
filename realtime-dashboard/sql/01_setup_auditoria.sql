@@ -103,12 +103,7 @@ BEGIN
     FROM information_schema.tables
     WHERE table_type = 'BASE TABLE'
       AND table_schema = 'public'
-      AND (
-        table_name LIKE 'tb\_%' ESCAPE '\\'
-        OR table_name LIKE 'ta\_%' ESCAPE '\\'
-        OR table_name LIKE 'tl\_%' ESCAPE '\\'
-        OR table_name LIKE 'rl\_%' ESCAPE '\\'
-      )
+      AND table_name ~ '^(tb_|ta_|tl_|rl_)'
       AND table_name <> 'audit_log'
   LOOP
     EXECUTE format('DROP TRIGGER IF EXISTS tr_audit_dml ON %I.%I;', r.table_schema, r.table_name);

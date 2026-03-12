@@ -39,6 +39,17 @@ O sistema já tenta automaticamente outro modo (via Node.js), então deve funcio
 
 ---
 
+
+## Se aparecer `invalid escape string`
+Esse erro já foi corrigido nas versões mais novas do projeto.
+Atualize o repositório e rode novamente:
+
+```bash
+cd CODEX
+git pull
+./iniciar_dashboard.sh
+```
+
 ## Se aparecer erro de permissão
 Copie e cole:
 
